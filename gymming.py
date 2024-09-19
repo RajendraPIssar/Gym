@@ -46,7 +46,6 @@ equipment_images = {
 # Dictionary to map exercise titles to video (GIF) paths
 exercise_videos = {
     "Close-grip bench press": r"bench-press-regular-bench-press.gif.mp4",
-    exercise_videos = {
     "Close-grip bench press": r"bench-press-regular-bench-press.gif.mp4",
     "Partner plank band row":"17d1d9804a967bd3378445dff31b9f8b.gif",
     "Banded crunch isometric hold":"055920ed631d97d2501744cf85f19fd4.gif",
