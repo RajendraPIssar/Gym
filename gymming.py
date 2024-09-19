@@ -30,8 +30,18 @@ add_bg_from_local(r"C:\Users\ACER\Downloads\background_image.jpg")  # Make sure 
 
 # Dictionary of equipment images
 equipment_images = {
-    "Barbell": "Barbell.jpg",
-    "Dumbbell": "Dumbbell.jpg"
+    "Bands": "Bands.jpg",
+    "Barbell": "barbell.jpg",
+    "Body Only": "Body Only.jpg",
+    "Barbell": "barbell.jpg",
+    "Cable": "Cable Machine.jpg",
+    "Dumbbell": "Dumbbell.jpg",
+    "Exercise Ball": "ExerciseBall.jpg",
+    "E-Z Curl Bar": "E-Z Curl Bar.jpg",
+    "Foam Roll": "Foam Roll.jpg",
+    "Kettlebells": "Kettlebell.jpg",
+    "Machine": "Machine.jpg",
+    "Medicine Ball": "Medicine Ball.jpg"
 }
 
 # Streamlit app code
