@@ -4,7 +4,7 @@ import random
 import base64
 
 # Load the dataset
-df = pd.read_csv(r"C:\Users\ACER\Desktop\cleaned_megaGymDataset.csv", index_col=0)
+df = pd.read_csv(r"cleaned_megaGymDataset.csv", index_col=0)
 
 # Dropping duplicates and NaN values
 df.drop_duplicates(inplace=True, keep='first')
@@ -30,10 +30,8 @@ add_bg_from_local(r"C:\Users\ACER\Downloads\background_image.jpg")  # Make sure 
 
 # Dictionary of equipment images
 equipment_images = {
-    "Machine": r"C:\Users\ACER\Downloads\Cable Machine.jpg",
-    # Add more equipment types and corresponding image paths as needed
-    "Barbell": r"C:\Users\ACER\Downloads\Barbell.jpg",
-    "Dumbbell": r"C:\Users\ACER\Downloads\Dumbbell.jpg"
+    "Barbell": "Barbell.jpg",
+    "Dumbbell": "Dumbbell.jpg"
 }
 
 # Streamlit app code
