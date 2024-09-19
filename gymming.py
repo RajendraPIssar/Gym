@@ -33,7 +33,6 @@ equipment_images = {
     "Bands": "Bands.jpg",
     "Barbell": "barbell.jpg",
     "Body Only": "Body Only.jpg",
-    "Barbell": "barbell.jpg",
     "Cable": "Cable Machine.jpg",
     "Dumbbell": "Dumbbell.jpg",
     "Exercise Ball": "ExerciseBall.jpg",
@@ -47,9 +46,10 @@ equipment_images = {
 # Dictionary to map exercise titles to video (GIF) paths
 exercise_videos = {
     "Close-grip bench press": r"bench-press-regular-bench-press.gif.mp4"
-    # Add more exercise titles and their corresponding GIF paths
+    # Add more exercise titles and their corresponding video paths
 }
 
+# Function to display video
 def display_video(video_path, title, width=300):
     st.write(f"**{title}**")  # Display title as caption above the video
     st.video(video_path, start_time=0)  # Use st.video to display MP4
@@ -124,6 +124,12 @@ if st.button("Generate Weekly Plan"):
                         equipment = row['Equipment']
                         if equipment in equipment_images:
                             st.image(equipment_images[equipment], caption=f"Equipment: {equipment}", use_column_width=True)
+                        
+                        # Display exercise video if available
+                        exercise_title = row['Title']
+                        if exercise_title in exercise_videos:
+                            video_path = exercise_videos[exercise_title]
+                            display_video(video_path, exercise_title)
 
         else:
             # Handle users below 50
@@ -177,3 +183,9 @@ if st.button("Generate Weekly Plan"):
                     equipment = row['Equipment']
                     if equipment in equipment_images:
                         st.image(equipment_images[equipment], caption=f"Equipment: {equipment}", use_column_width=True)
+                    
+                    # Display exercise video if available
+                    exercise_title = row['Title']
+                    if exercise_title in exercise_videos:
+                        video_path = exercise_videos[exercise_title]
+                        display_video(video_path, exercise_title)
