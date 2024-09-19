@@ -44,6 +44,16 @@ equipment_images = {
     "Medicine Ball": "Medicine Ball.jpg"
 }
 
+# Dictionary to map exercise titles to video (GIF) paths
+exercise_videos = {
+    "Close-grip bench press": r"bench-press-regular-bench-press.gif.mp4"
+    # Add more exercise titles and their corresponding GIF paths
+}
+
+def display_video(video_path, title, width=300):
+    st.write(f"**{title}**")  # Display title as caption above the video
+    st.video(video_path, start_time=0)  # Use st.video to display MP4
+
 # Streamlit app code
 st.title("Gym and Healthy Planner - Weekly Plan Generator")
 
